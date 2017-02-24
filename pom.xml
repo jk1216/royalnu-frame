@@ -29,5 +29,6 @@
   <modules>
     <module>royalnu-maven</module>
     <module>royalnu-utility</module>
+    <module>royalnu-common</module>
   </modules>
 </project>
