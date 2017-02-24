@@ -1,0 +1,6 @@
+com\royalnu\vertx\util\IDGenerator.class
+com\royalnu\vertx\util\CheckUtil.class
+com\palm\vertx\util\url\EventBusUriUtil.class
+com\royalnu\vertx\util\IPUtil.class
+com\royalnu\vertx\util\NetworkUtils.class
+com\royalnu\vertx\util\JsonUtil.class
