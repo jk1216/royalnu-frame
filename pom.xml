@@ -30,5 +30,6 @@
     <module>royalnu-maven</module>
     <module>royalnu-utility</module>
     <module>royalnu-common</module>
+    <module>royalnu-demo</module>
   </modules>
 </project>

@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.royalnu.kgkx</groupId>
-  <artifactId>royalnu-maven</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>royalnu-maven</name>
-<description>定义所有模块的公共依赖包</description>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.royalnu.kgkx</groupId>
+	<artifactId>royalnu-maven</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>royalnu-maven</name>
+	<description>定义所有模块的公共依赖包</description>
 
- <properties>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<palm.vertx.version>0.0.1-SNAPSHOT</palm.vertx.version>
 		<commons.lang.version>2.6</commons.lang.version>
@@ -20,8 +21,8 @@
 		<install.package.name>${project.name}-install</install.package.name>
 		<install.package.dir>${project.build.directory}/${install.package.name}</install.package.dir>
 	</properties>
-	
-<!--依赖管理 -->
+
+	<!--依赖管理 -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -80,19 +81,19 @@
 			</dependency>
 
 
-			<!--jk start -->
+			<!--royalnu start -->
 			<dependency>
-				<groupId>com.palm.jk</groupId>
-				<artifactId>jk-common</artifactId>
+				<groupId>com.royalnu.kgkx</groupId>
+				<artifactId>royalnu-common</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>com.palm.jk</groupId>
-				<artifactId>jk-utility</artifactId>
+				<groupId>com.royalnu.kgkx</groupId>
+				<artifactId>royalnu-utility</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-			<!-- jk stop -->
+			<!-- royalnu stop -->
 		</dependencies>
 	</dependencyManagement>
 	<build>
