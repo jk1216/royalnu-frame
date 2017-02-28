@@ -1,4 +1,4 @@
-package com.royalnu.kgkx;
+package com.royalnu.kgkx.client.web;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
@@ -10,7 +10,6 @@ public class HttpServerVerticle extends AbstractVerticle {
 	public void start(Future<Void> fut) throws Exception {
 		int port = config().getInteger("http.port", 8080);		
 		Router router=Router.router(vertx);
-		
 		
 		
 		

@@ -11,7 +11,7 @@
   <artifactId>royalnu-demo</artifactId>
   <name>royalnu-demo</name>
   <packaging>pom</packaging>
- 
+  
   <modules>
   	<module>royalnu-demo-client</module>
   </modules>
