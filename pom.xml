@@ -31,5 +31,6 @@
     <module>royalnu-utility</module>
     <module>royalnu-common</module>
     <module>royalnu-demo</module>
+    <module>royalnu-vertx-web</module>
   </modules>
 </project>

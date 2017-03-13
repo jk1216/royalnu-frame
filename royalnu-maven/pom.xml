@@ -17,6 +17,7 @@
 		<commons.io.version>2.4</commons.io.version>
 		<vertx.io.version>3.3.3</vertx.io.version>
 		<spring.version>4.3.1.RELEASE</spring.version>
+		<hazelcast.version>3.6-EA2</hazelcast.version>
 		<!-- 编译路径编辑 -->
 		<install.package.name>${project.name}-install</install.package.name>
 		<install.package.dir>${project.build.directory}/${install.package.name}</install.package.dir>
@@ -44,6 +45,62 @@
 			</dependency>
 
 			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-jdbc-client</artifactId>
+				<version>${vertx.io.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-redis-client</artifactId>
+				<version>${vertx.io.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-spring-client</artifactId>
+				<version>${vertx.io.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-codegen</artifactId>
+				<version>${vertx.io.version}</version>
+			</dependency>
+
+			<!-- Microservice toolbox -->
+			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-service-discovery</artifactId>
+				<version>${vertx.io.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-circuit-breaker</artifactId>
+				<version>${vertx.io.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-auth-oauth2</artifactId>
+				<version>${vertx.io.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.hazelcast</groupId>
+				<artifactId>hazelcast</artifactId>
+				<version>${hazelcast.version}</version>
+			</dependency>
+
+			<!--Vertx provided dependencies -->
+			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-hazelcast</artifactId>
+				<version>${vertx.io.version}</version>
+				<scope>compile</scope>
+			</dependency>
+
+			<dependency>
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>
 				<version>${commons.lang.version}</version>
@@ -55,6 +112,32 @@
 				<version>${commons.io.version}</version>
 			</dependency>
 
+			<!-- Logging dependencies -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.12</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>2.3</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>2.3</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-slf4j-impl</artifactId>
+				<version>2.3</version>
+			</dependency>
+			<dependency>
+				<groupId>biz.paluch.logging</groupId>
+				<artifactId>logstash-gelf</artifactId>
+				<version>1.11.0</version>
+			</dependency>
 			<!-- google guava -->
 			<dependency>
 				<groupId>com.google.guava</groupId>
@@ -63,12 +146,6 @@
 			</dependency>
 
 			<!-- spring tool -->
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-core</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
@@ -79,6 +156,22 @@
 				<artifactId>owasp-html-sanitizer</artifactId>
 				<version>r88</version>
 			</dependency>
+
+			<!-- royalnu vertx spring web start -->
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- royalnu vertx spring web end -->
 
 
 			<!--royalnu start -->
@@ -113,6 +206,7 @@
 						<encoding>utf8</encoding>
 					</configuration>
 				</plugin>
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
