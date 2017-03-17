@@ -66,8 +66,8 @@ public class RegisterVerticleTest {
 		String encoderJson = URLEncoder.encode(addRegisterJsonObject.toString(), "UTF-8");
 		
 		System.out.println(encoderJson);
-		/*final String addUserJson = "{'username':'jk','phone':'13533727030','email':'81555166@qq.com','birthDate':'"
-				+ birthDate + "'}";*/
+		final String addUserJson = "{'username':'jk','phone':'13533727030','email':'81555166@qq.com','birthDate':'"
+				+ birthDate + "'}";
 		
 		vertx.createHttpClient().post(port, host,"/api/register")
 		.putHeader("content-type", "application/json;charset=utf-8")

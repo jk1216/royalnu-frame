@@ -14,7 +14,7 @@
 	<name>royalnu-demo-server</name>
 
 	<properties>
-		<main.verticle></main.verticle>
+		<main.verticle>com.royalnu.kgkx.demo.server.todolist.consumer.TodoConsumer</main.verticle>
 	</properties>
 	
 	<dependencies>

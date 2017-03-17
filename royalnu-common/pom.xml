@@ -14,10 +14,6 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.royalnu.kgkx</groupId>
-			<artifactId>royalnu-common</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.royalnu.kgkx</groupId>
 			<artifactId>royalnu-utility</artifactId>
 		</dependency>
 		<dependency>

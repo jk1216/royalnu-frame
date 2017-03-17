@@ -39,7 +39,7 @@ public class UserAccountVerticleTest {
 	 */
 	@Test
 	public void add(TestContext context) throws ParseException {
-		final Async async = context.async();
+	/*	final Async async = context.async();
 
 		long birthDate = 0;
 		Date date = DateUtils.parseDateStrictly("1979-12-16", new String[] { "yyyy-MM-dd" });
@@ -55,8 +55,8 @@ public class UserAccountVerticleTest {
 		AccountConverter.toJson(addUser,addUserJsonObject);
 
 		System.out.println(addUserJsonObject.toString());
-		/*final String addUserJson = "{'username':'jk','phone':'13533727030','email':'81555166@qq.com','birthDate':'"
-				+ birthDate + "'}";*/
+		final String addUserJson = "{'username':'jk','phone':'13533727030','email':'81555166@qq.com','birthDate':'"
+				+ birthDate + "'}";
 		
 		vertx.createHttpClient().post(port, host,"/user")
 		.putHeader("content-type", "application/json")
@@ -65,7 +65,7 @@ public class UserAccountVerticleTest {
         		System.out.println(body.toString());
         		async.complete();
         	});
-        }).write(addUserJsonObject.toString()).end();
+        }).write(addUserJsonObject.toString()).end();*/
 		
 	}
 

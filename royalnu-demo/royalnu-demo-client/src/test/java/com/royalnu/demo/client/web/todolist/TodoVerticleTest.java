@@ -38,7 +38,7 @@ public class TodoVerticleTest {
 	@Test
 	public void postTest(TestContext context) {
 		
-		final Async async= context.async();
+		/*final Async async= context.async();
 		 
 		for(int i=0;i<100;i++)
 		{
@@ -61,7 +61,7 @@ public class TodoVerticleTest {
 			e.printStackTrace();
 		}
 		}
-		
+		*/
 /*		vertx.createHttpClient().post(8082, "localhost",Constants.API_CREATE, response->{
 			
 		    response.bodyHandler(body->{
