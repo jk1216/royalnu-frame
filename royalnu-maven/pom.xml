@@ -18,6 +18,8 @@
 		<vertx.io.version>3.3.3</vertx.io.version>
 		<spring.version>4.3.1.RELEASE</spring.version>
 		<hazelcast.version>3.6-EA2</hazelcast.version>
+		<mysql.conn.version>5.1.1</mysql.conn.version>
+    	<log4j.version>2.8</log4j.version>
 		<!-- 编译路径编辑 -->
 		<install.package.name>${project.name}-install</install.package.name>
 		<install.package.dir>${project.build.directory}/${install.package.name}</install.package.dir>
@@ -67,6 +69,13 @@
 				<artifactId>vertx-codegen</artifactId>
 				<version>${vertx.io.version}</version>
 			</dependency>
+			
+			<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.conn.version}</version>
+		</dependency>
+			
 
 			<!-- Microservice toolbox -->
 			<dependency>
@@ -90,6 +99,12 @@
 				<groupId>com.hazelcast</groupId>
 				<artifactId>hazelcast</artifactId>
 				<version>${hazelcast.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.vertx</groupId>
+				<artifactId>vertx-service-proxy</artifactId>
+				<version>${vertx.io.version}</version>
 			</dependency>
 
 			<!--Vertx provided dependencies -->

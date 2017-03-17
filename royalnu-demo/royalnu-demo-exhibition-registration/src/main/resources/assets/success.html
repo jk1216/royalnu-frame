@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>广东会展之窗营销推广大赛报名入口</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<img src="img/top.jpg" class="img-responsive" alt="">
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10" style="border: 1px solid #ccc;margin-top: 20px;">
+			<div style="padding:30px;">
+
+					
+<p style="text-align: center;"><strong>报名成功</strong></p>
+        初赛作品格式要求：4月7日前每个团队需递交一份营销策划案（PDF版本）至邮箱：gzdxlyhx@163.com。<br>每份策划书应当包含独立的封面，封面内容需包含团队名称、参赛者姓名、队长的联系电话及邮箱地址，作品命名格式要求：院校名称+团队名称+队长姓名+组别
+
+			</div>
+				
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function search(mo_phone) {
+	        $.ajax({
+	            url: "api/register/" + mo_phone
+	        }).done(function () {
+	            $('#myModal').modal('toggle');
+	        }).fail(function() {
+	        	  $('#fail').modal('toggle');
+				});
+	    }
+	    $("#search").click(function() {
+	    	$("input[type=text]").each(function(){
+				if($(this).val()=='') alert('第'+($(this).index()+1)+'个文本框为空');
+				return
+			});
+			if( $("#mo_phone").val().length > 20){ alert("联系电话超过20个字符"); return}
+	    	search($('#mo_phone').val()) 
+	    });
+
+	</script>
+	<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">提示</h4>
+      </div>
+      <div class="modal-body">
+        已经报名
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="fail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">提示</h4>
+      </div>
+      <div class="modal-body">
+        没有报名
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

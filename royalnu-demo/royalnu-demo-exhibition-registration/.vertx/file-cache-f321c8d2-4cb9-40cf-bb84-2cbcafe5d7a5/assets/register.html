@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>广东会展之窗营销推广大赛报名入口</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="http://www.royalnu.com:8999/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://www.royalnu.com:8999/assets/css/style.css">
+	<script src="http://www.royalnu.com:8999/assets/js/jquery.min.js"></script>
+	<script src="http://www.royalnu.com:8999/assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<img src="http://www.royalnu.com:8999/assets/img/top.jpg" class="img-responsive" alt="">
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10" style="border: 1px solid #ccc;margin-top: 20px;">
+			<div style="padding:30px;">
+				<p>
+					参赛报名及作品提交时间：2017年3月15日--4月7日<br> 
+报名咨询：                      156 2640 1629   洪小姐
+				</p>
+			</div>
+				<form class="form-horizontal">
+				  <div class="form-group">
+				    <label for="group_name" class="col-sm-2 control-label">小组名字：</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="group_name">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="group_number" class="col-sm-2 control-label">小组人数：</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="group_number">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="group_leader" class="col-sm-2 control-label">组长：</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="group_leader">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="group_member" class="col-sm-2 control-label">组员名字：</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="group_member">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="mo_phone" class="col-sm-2 control-label">联系方式：</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="mo_phone">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="email" class="col-sm-2 control-label">邮件地址：</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="email">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="school" class="col-sm-2 control-label">所在学校：</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="school">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="school_profession" class="col-sm-2 control-label">学院专业：</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="school_profession">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <div class="col-sm-12 text-center">
+				      <!-- <button type="button" class="btn  btn-danger btn-lg" data-toggle="modal" data-target="#myModal" id="submit">提交</button> -->
+				      <button type="button" class="btn  btn-danger btn-lg" id="submit">提交</button>
+				    </div>
+				  </div>
+				</form>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+	<script>
+		function create(group_name, group_number, group_leader, group_member, mo_phone, email, school, school_profession) {
+	        $.post("/api/register", JSON.stringify({group_name: group_name, group_number: group_number, group_leader: group_leader,group_member: group_member, mo_phone:mo_phone, email:email, school:school, school_profession:school_profession}), function (d) {
+	            //$('#productModal').modal('toggle');
+	            //alert(d); 
+	        }, "json")
+	        .done(function() {  
+			    //alert( "success" );  
+			    //$('#productModal').modal('toggle');
+			    window.location.href="success.html";
+			    $('form')[0].reset();
+			  })
+	        .fail(function() {
+	        	  $('#fail').modal('toggle');
+				});
+	    }
+
+	    $("#submit").click(function() {
+	    	var reg = /^[0-9]*$/;
+	    	if( $("#group_number").val()==''){alert("小组人数不能为空"); return;}
+	    	if( $("#group_name").val()==''){ alert("小组名字不能为空"); return;}
+	    	if( $("#group_leader").val()==''){ alert("组长不能为空"); return;}
+	    	if( $("#group_member").val()==''){ alert("组员名字不能为空"); return;}
+	    	if( $("#mo_phone").val()==''){ alert("联系电话不能为空"); return;}
+	    	if( $("#email").val()==''){ alert("电子邮件不能为空"); return;}
+	    	if( $("#school").val()==''){ alert("学校名字不能为空"); return;}
+	    	if( $("#school_profession").val()==''){ alert("学院专业不能为空"); return;}
+
+			if( !reg.test($("#group_number").val())){alert("小组人数不是数字"); return;}
+	    	if( $("#group_name").val().length > 30 ){ alert("小组名字超过30个字符"); return;}
+	    	if( $("#group_leader").val().length > 20 ){ alert("组长超过20个字符"); return;}
+	    	if( $("#group_member").val().length > 20 ){ alert("组员名字超过100个字符"); return;}
+	    	if( $("#mo_phone").val().length > 20){ alert("联系电话超过20个字符"); return;}
+	    	if( $("#email").val().length > 100 ){ alert("电子邮件超过100个字符"); return;}
+	    	if( $("#school").val().length > 100 ){ alert("学校名字超过100个字符"); return;}
+	    	if( $("#school_profession").val().length > 100 ){ alert("学院专业超过100个字符"); return;}
+
+	    	create($("#group_name").val(), $("#group_number").val(),  $("#group_leader").val(),  $("#group_member").val(), $("#mo_phone").val(), $("#email").val(), $("#school").val(), $("#school_profession").val());
+	    });
+
+
+	</script>
+	<!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">成功报名</h4>
+      </div>
+      <div class="modal-body">
+        初赛作品格式要求：4月7日前每个团队需递交一份营销策划案（PDF版本）至邮箱：gzdxlyhx@163.com。每份策划书应当包含独立的封面，封面内容需包含团队名称、参赛者姓名、队长的联系电话及邮箱地址，作品命名格式要求：院校名称+团队名称+队长姓名+组别
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="fail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">错误</h4>
+      </div>
+      <div class="modal-body">
+        此用户已注册或服务器异常
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

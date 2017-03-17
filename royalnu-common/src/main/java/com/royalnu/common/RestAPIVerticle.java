@@ -1,4 +1,4 @@
-package com.royalnu.kgkx.common;
+package com.royalnu.common;
 
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Future;

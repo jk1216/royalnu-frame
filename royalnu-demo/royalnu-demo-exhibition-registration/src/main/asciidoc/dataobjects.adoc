@@ -1,0 +1,25 @@
+= Cheatsheets
+
+[[Register]]
+== Register
+
+++++
+ 学生报名类
+++++
+'''
+
+[cols=">25%,^25%,50%"]
+[frame="topbot"]
+|===
+^|Name | Type ^| Description
+|[[email]]`email`|`String`|-
+|[[group_leader]]`group_leader`|`String`|-
+|[[group_member]]`group_member`|`String`|-
+|[[group_name]]`group_name`|`String`|-
+|[[group_number]]`group_number`|`String`|-
+|[[id]]`id`|`Number (long)`|-
+|[[mo_phone]]`mo_phone`|`String`|-
+|[[school]]`school`|`String`|-
+|[[school_profession]]`school_profession`|`String`|-
+|===
+

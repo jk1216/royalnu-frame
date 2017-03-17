@@ -15,5 +15,7 @@
   	<module>royalnu-demo-client</module>
     <module>royalnu-demo-server</module>
     <module>royalnu-api-gateway</module>
+    <module>royalnu-demo-account-microservice</module>
+    <module>royalnu-demo-exhibition-registration</module>
   </modules>
 </project>

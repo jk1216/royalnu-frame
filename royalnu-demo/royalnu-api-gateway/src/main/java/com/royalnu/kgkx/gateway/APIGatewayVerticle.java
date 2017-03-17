@@ -1,6 +1,7 @@
 package com.royalnu.kgkx.gateway;
 
-import com.royalnu.kgkx.common.RestAPIVerticle;
+
+import com.royalnu.common.RestAPIVerticle;
 
 import io.vertx.core.Future;
 import io.vertx.core.json.JsonObject;
